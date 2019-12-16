@@ -94,3 +94,12 @@ background-color: #A6ABAA;
 
   margin-left: 12%;
 }
+
+.greet{
+  color: purple;
+  background-color: yellow;
+  border: 2px solid black;
+  transition: linear;
+  font-size: medium;
+  
+}

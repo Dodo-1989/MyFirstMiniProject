@@ -75,9 +75,11 @@ dontTouch.onclick = function(){
   image.classList.add("width")
   
 }
+addGreeting();
 
 greetings.onclick = function(){
   sayHello();
+  
 }
 
 
@@ -124,4 +126,16 @@ function changeH1(){
     }
   }
 
+  function addGreeting(){
+    greetings.addEventListener("mouseover", function(){
+      this.classList.add("greet")
+         
+});
 
+    greetings.addEventListener("mouseout", function(){
+      this.classList.remove("greet")
+   
+  });
+}
+
+//..........................
