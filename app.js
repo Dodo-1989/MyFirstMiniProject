@@ -1,4 +1,4 @@
-
+ 
 let homeBottun = document.querySelector(".home")
 let loginBottun = document.querySelector(".login")
 let body = document.querySelector("body")
@@ -8,6 +8,8 @@ let image = document.querySelector("img")
 let imgBottun = document.querySelector(".change-photo")
 let dontTouch = document.querySelector(".dontTouch")
 let greetings = document.querySelector(".enterName")
+let firstl = document.querySelector(".firstline")
+let reAppear = document.querySelector(".hide")
 
 
 
@@ -39,12 +41,14 @@ h1.classList.remove("toggler")
 };
 
 homeBottun.onclick = function(){
-  prag.classList.toggle("prag")
-
+   chnageIntroReset()
+   
+  
 }
 
 imgBottun.addEventListener("mouseover", function(){
   this.classList.add("red")
+
 });
 
 imgBottun.addEventListener("mouseout", function(){
@@ -69,10 +73,9 @@ dontTouch.addEventListener("mouseout", function(){
 
 
 dontTouch.onclick = function(){
-  h1.classList.toggle("toggler")
-  h1.textContent = "I Told You";
-  image.setAttribute('src', "https://cdnb.artstation.com/p/assets/images/images/002/828/955/large/sabbas-apterus-blood-red-and-cyan.jpg?1466184215")
-  image.classList.add("width")
+ 
+  ageValidation()
+ 
   
 }
 addGreeting();
@@ -114,15 +117,16 @@ function changeH1(){
     localStorage.setItem('name', hello)
     h1.textContent = 'Guest Name, ' + hello;
 
-    if(!localStorage.getItem('name') ) {
+    if(!localStorage.getItem('name')) {
       sayHello();
     }   if ( hello === null){
            h1.textContent = "Why Dont you like me :("
+            
     }
     
       else {
         let storedName = localStorage.getItem('name');
-        h1.textContent = 'Hello'+ ' ' + storedName + ',' + 'welcome ';
+        h1.textContent = 'Hello'+ ' ' + storedName + ',' +' '+ 'welcome ';
     }
   }
 
@@ -138,4 +142,31 @@ function changeH1(){
   });
 }
 
+function ageValidation(){
+  let age = prompt("Enter your age please")
+  if ( age >= 18){
+     h1.classList.toggle("toggler")
+     h1.textContent = "I Told You";
+     image.setAttribute('src', "https://cdnb.artstation.com/p/assets/images/images/002/828/955/large/sabbas-apterus-blood-red-and-cyan.jpg?1466184215")
+     image.classList.add("width")
+     body.style.backgroundColor = "red";
+     prag.textContent = "YOU BETTER RUN"
+     firstl.textContent = " I KNOW WHAT YOU DID LAST WINTER"
+
+  }else{
+    validage = (18 - age)
+    h1.textContent = `Sorry, come back after ${validage} years` 
+  }
+}
+
+
+function chnageIntroReset(){
+  prag.classList.toggle("prag")
+   prag.textContent = reAppear.textContent
+   h1.classList.remove("toggler")
+   h1.textContent = "About Me"
+   firstl.textContent = " Why Did I chose to become a website Developer"
+   body.style.backgroundColor = "#13BFCD"
+   image.setAttribute ('src', 'https://t4.ftcdn.net/jpg/02/66/76/83/240_F_266768305_jxxjP3ivAYLHxbOejYQ4095SvaGfTjc3.jpg')
+}
 //..........................

@@ -22,7 +22,7 @@ h1{
 
 
 
-.first-line {
+.firstline {
   color:#641505;
   font-size:25px;
   text-align: center;
@@ -99,7 +99,11 @@ background-color: #A6ABAA;
   color: purple;
   background-color: yellow;
   border: 2px solid black;
-  transition: linear;
+  transition-duration: 1s;
   font-size: medium;
   
+}
+
+.hide{
+  display:none;
 }
