@@ -150,6 +150,7 @@ function ageValidation(){
      image.setAttribute('src', "https://cdnb.artstation.com/p/assets/images/images/002/828/955/large/sabbas-apterus-blood-red-and-cyan.jpg?1466184215")
      image.classList.add("width")
      body.style.backgroundColor = "red";
+     body.classList.add("Holly")
      prag.textContent = "YOU BETTER RUN"
      firstl.textContent = " I KNOW WHAT YOU DID LAST WINTER"
 
@@ -168,5 +169,6 @@ function chnageIntroReset(){
    firstl.textContent = " Why Did I chose to become a website Developer"
    body.style.backgroundColor = "#13BFCD"
    image.setAttribute ('src', 'https://t4.ftcdn.net/jpg/02/66/76/83/240_F_266768305_jxxjP3ivAYLHxbOejYQ4095SvaGfTjc3.jpg')
+   body.classList.remove("Holly")
 }
 //..........................
