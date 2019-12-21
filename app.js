@@ -155,7 +155,7 @@ function ageValidation(){
      firstl.textContent = " I KNOW WHAT YOU DID LAST WINTER"
 
   }else{
-    validage = (18 - age)
+    var validage = (18 - age)
     h1.textContent = `Sorry, come back after ${validage} years` 
   }
 }
